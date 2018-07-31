@@ -1,17 +1,33 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
       Contact
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="logo-ionic" slot="start"></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-split-pane>
+    <!--  our side menu  -->
+    <ion-menu menuId="Contact">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Contact Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>Contact Menu Item 1</ion-item>
+          <ion-item>Contact Menu Item 2</ion-item>
+          <ion-item>Contact Menu Item 3</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- the main content -->
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
 </ion-content>
